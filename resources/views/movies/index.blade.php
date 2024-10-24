@@ -7,21 +7,23 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="fw-bold text-center my-5">
+                <h1 class="fw-bold text-center my-5 fst-italic text-decoration-underline">
                     Movies Index
                 </h1>
             </div>
             @forelse ($movies as $movie)
                 <div class="col-6">
-                    <div class="card my-3">
-                        <div class="card-body">
+                    <div class="card my-3 shadow-lg bg-white border border-4">
+                        <div class="card-body p-3 bg-dark text-white">
                             <h5 class="card-title"> {{ $movie->title }} </h5>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">{{ $movie->original_title }}</li>
-                            <li class="list-group-item">{{ $movie->nationality }}</li>
-                            <li class="list-group-item">{{ $movie->date }}</li>
-                            <li class="list-group-item">{{ $movie->vote }}</li>
+                            <li class="list-group-item bg-info-subtle text-info-emphasis"> Titolo originale:
+                                {{ $movie->original_title }}</li>
+                            <li class="list-group-item"> Nazionalità. {{ $movie->nationality }}</li>
+                            <li class="list-group-item bg-info-subtle text-info-emphasis"> Data di uscita:
+                                {{ $movie->date }}</li>
+                            <li class="list-group-item"> Voto: {{ $movie->vote }}</li>
                         </ul>
                     </div>
                 </div>

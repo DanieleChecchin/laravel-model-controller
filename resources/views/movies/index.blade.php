@@ -13,7 +13,7 @@
             </div>
             @forelse ($movies as $movie)
                 <div class="col-6">
-                    <div class="card my-3 shadow-lg bg-white border border-4">
+                    <div class="card my-3 shadow-lg bg-white border">
                         <div class="card-body p-3 bg-dark text-white">
                             <h5 class="card-title"> {{ $movie->title }} </h5>
                         </div>
